@@ -1,14 +1,13 @@
 --- a/arch/arm/dts/Makefile
 +++ b/arch/arm/dts/Makefile
-@@ -175,6 +175,7 @@ dtb-$(CONFIG_ROCKCHIP_RK3568) += \
- 	rk3568-nanopi-r5s.dtb \
- 	rk3568-photonicat.dtb \
- 	rk3568-opc-h68k.dtb \
-	rk3568-lyt-t68m.dtb \
-+   rk3568-xgp.dtb \
+@@ -173,6 +173,7 @@ dtb-$(CONFIG_ROCKCHIP_RK3399) += \
+ dtb-$(CONFIG_ROCKCHIP_RK3568) += \
+ 	rk3568-bpi-r2-pro.dtb \
  	rk3568-evb.dtb \
++	rk3568-xgp.dtb \
  	rk3568-r66s.dtb \
- 	rk3568-rock-3a.dtb \
+ 	rk3568-opc-h68k.dtb \
+ 	rk3568-mrkaio-m68s.dtb \
 --- /dev/null
 +++ b/arch/arm/dts/rk3568-xgp-u-boot.dtsi
 @@ -0,0 +1,21 @@

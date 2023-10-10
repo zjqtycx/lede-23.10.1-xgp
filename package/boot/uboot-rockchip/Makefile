@@ -5,10 +5,10 @@
 include $(TOPDIR)/rules.mk
 include $(INCLUDE_DIR)/kernel.mk
 
-PKG_VERSION:=2023.07
+PKG_VERSION:=2022.07
 PKG_RELEASE:=$(AUTORELEASE)
 
-PKG_HASH:=12e921b466ae731cdbc355e6832b7f22bc90b01aeceef9886f98aaba7b394300
+PKG_HASH:=92b08eb49c24da14c1adbf70a71ae8f37cc53eeb4230e859ad8b6733d13dcf5e
 
 PKG_MAINTAINER:=Tobias Maedel <openwrt@tbspace.de>
 
@@ -89,7 +89,7 @@ define U-Boot/nanopi-r4s-rk3399
     friendlyarm_nanopi-r4s
   DEPENDS:=+PACKAGE_u-boot-nanopi-r4s-rk3399:arm-trusted-firmware-rk3399
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
-  ATF:=rk3399_bl31_v1.36.elf
+  ATF:=rk3399_bl31_v1.35.elf
   USE_RKBIN:=1
 endef
 
@@ -100,7 +100,7 @@ define U-Boot/nanopi-r4se-rk3399
     friendlyarm_nanopi-r4se
   DEPENDS:=+PACKAGE_u-boot-nanopi-r4se-rk3399:arm-trusted-firmware-rk3399
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
-  ATF:=rk3399_bl31_v1.36.elf
+  ATF:=rk3399_bl31_v1.35.elf
   USE_RKBIN:=1
 endef
 
@@ -131,7 +131,7 @@ define U-Boot/rongpin-king3399-rk3399
     rongpin_king3399
   DEPENDS:=+PACKAGE_u-boot-rongpin-king3399-rk3399:arm-trusted-firmware-rk3399
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
-  ATF:=rk3399_bl31_v1.36.elf
+  ATF:=rk3399_bl31_v1.35.elf
   USE_RKBIN:=1
 endef
 
@@ -142,7 +142,7 @@ define U-Boot/rocktech-mpc1903-rk3399
     rocktech_mpc1903
   DEPENDS:=+PACKAGE_u-boot-rocktech-mpc1903-rk3399:arm-trusted-firmware-rk3399
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
-  ATF:=rk3399_bl31_v1.36.elf
+  ATF:=rk3399_bl31_v1.35.elf
   USE_RKBIN:=1
 endef
 
@@ -153,57 +153,11 @@ define U-Boot/sharevdi-h3399pc-rk3399
     sharevdi_h3399pc
   DEPENDS:=+PACKAGE_u-boot-sharevdi-h3399pc-rk3399:arm-trusted-firmware-rk3399
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
-  ATF:=rk3399_bl31_v1.36.elf
+  ATF:=rk3399_bl31_v1.35.elf
   USE_RKBIN:=1
-endef
-
-define U-Boot/dilusense-dlfr100-rk3399
-  BUILD_SUBTARGET:=armv8
-  NAME:=Dilusense DLFR100
-  BUILD_DEVICES:= \
-    dilusense_dlfr100
-  DEPENDS:=+PACKAGE_u-boot-dilusense-dlfr100-rk3399:arm-trusted-firmware-rk3399
-  PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
-  ATF:=rk3399_bl31_v1.36.elf
-  USE_RKBIN:=1
-endef
-
-define U-Boot/xiaobao-nas-v1-rk3399
-  BUILD_SUBTARGET:=armv8
-  NAME:=Codinge Xiaobao NAS-I
-  BUILD_DEVICES:= \
-    codinge_xiaobao-nas-v1
-  DEPENDS:=+PACKAGE_u-boot-xiaobao-nas-v1-rk3399:arm-trusted-firmware-rk3399
-  PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
-  ATF:=rk3399_bl31_v1.36.elf
-  USE_RKBIN:=1
-endef
-
-# RK3566 boards
-
-define U-Boot/panther-x2-rk3566
-  BUILD_SUBTARGET:=armv8
-  NAME:=Panther X2
-  BUILD_DEVICES:= \
-    panther_x2
-  DEPENDS:=+PACKAGE_u-boot-panther-x2-rk3566:arm-trusted-firmware-rk3566
-  PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
-  ATF:=rk3568_bl31_v1.43.elf
-  DDR:=rk3566_ddr_1056MHz_v1.18.bin
 endef
 
 # RK3568 boards
-
-define U-Boot/lyt-t68m-rk3568
-  BUILD_SUBTARGET:=armv8
-  NAME:=LYT T68M
-  BUILD_DEVICES:= \
-    lyt_t68m
-  DEPENDS:=+PACKAGE_u-boot-lyt-t68m-rk3568:arm-trusted-firmware-rk3568
-  PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
-  ATF:=rk3568_bl31_v1.43.elf
-  DDR:=rk3568_ddr_1560MHz_v1.18.bin
-endef
 
 define U-Boot/mrkaio-m68s-rk3568
   BUILD_SUBTARGET:=armv8
@@ -213,8 +167,8 @@ define U-Boot/mrkaio-m68s-rk3568
     ezpro_mrkaio-m68s-plus
   DEPENDS:=+PACKAGE_u-boot-mrkaio-m68s-rk3568:arm-trusted-firmware-rk3568
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
-  ATF:=rk3568_bl31_v1.43.elf
-  DDR:=rk3568_ddr_1560MHz_v1.18.bin
+  ATF:=rk3568_bl31_v1.28.elf
+  DDR:=rk3568_ddr_1560MHz_v1.13.bin
 endef
 
 define U-Boot/nanopi-r5s-rk3568
@@ -225,8 +179,8 @@ define U-Boot/nanopi-r5s-rk3568
     friendlyarm_nanopi-r5s
   DEPENDS:=+PACKAGE_u-boot-nanopi-r5s-rk3568:arm-trusted-firmware-rk3568
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
-  ATF:=rk3568_bl31_v1.43.elf
-  DDR:=rk3568_ddr_1560MHz_v1.18.bin
+  ATF:=rk3568_bl31_v1.28.elf
+  DDR:=rk3568_ddr_1560MHz_v1.13.bin
 endef
 
 define U-Boot/opc-h68k-rk3568
@@ -238,8 +192,8 @@ define U-Boot/opc-h68k-rk3568
     hinlink_opc-h69k
   DEPENDS:=+PACKAGE_u-boot-opc-h68k-rk3568:arm-trusted-firmware-rk3568
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
-  ATF:=rk3568_bl31_v1.43.elf
-  DDR:=rk3568_ddr_1560MHz_v1.18.bin
+  ATF:=rk3568_bl31_v1.28.elf
+  DDR:=rk3568_ddr_1560MHz_v1.13.bin
 endef
 
 define U-Boot/xgp-rk3568
@@ -260,8 +214,8 @@ define U-Boot/photonicat-rk3568
     ariaboard_photonicat
   DEPENDS:=+PACKAGE_u-boot-photonicat-rk3568:arm-trusted-firmware-rk3568
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
-  ATF:=rk3568_bl31_v1.43.elf
-  DDR:=rk3568_ddr_1560MHz_v1.18.bin
+  ATF:=rk3568_bl31_v1.28.elf
+  DDR:=rk3568_ddr_1560MHz_v1.13.bin
 endef
 
 define U-Boot/radxa-e25-rk3568
@@ -271,8 +225,8 @@ define U-Boot/radxa-e25-rk3568
     radxa_e25
   DEPENDS:=+PACKAGE_u-boot-radxa-e25-rk3568:arm-trusted-firmware-rk3568
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
-  ATF:=rk3568_bl31_v1.43.elf
-  DDR:=rk3568_ddr_1560MHz_v1.18.bin
+  ATF:=rk3568_bl31_v1.28.elf
+  DDR:=rk3568_ddr_1560MHz_v1.13.bin
 endef
 
 define U-Boot/rock-3a-rk3568
@@ -282,8 +236,8 @@ define U-Boot/rock-3a-rk3568
     radxa_rock-3a
   DEPENDS:=+PACKAGE_u-boot-rock-3a-rk3568:arm-trusted-firmware-rk3568
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
-  ATF:=rk3568_bl31_v1.43.elf
-  DDR:=rk3568_ddr_1560MHz_v1.18.bin
+  ATF:=rk3568_bl31_v1.28.elf
+  DDR:=rk3568_ddr_1560MHz_v1.13.bin
 endef
 
 define U-Boot/r66s-rk3568
@@ -294,19 +248,8 @@ define U-Boot/r66s-rk3568
     fastrhino_r68s
   DEPENDS:=+PACKAGE_u-boot-r66s-rk3568:arm-trusted-firmware-rk3568
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
-  ATF:=rk3568_bl31_v1.43.elf
-  DDR:=rk3568_ddr_1560MHz_v1.18.bin
-endef
-
-define U-Boot/seewo-sv21-rk3568
-  BUILD_SUBTARGET:=armv8
-  NAME:=Seewo sv21-rk3568
-  BUILD_DEVICES:= \
-    seewo_sv21-rk3568
-  DEPENDS:=+PACKAGE_u-boot-seewo-sv21-rk3568:arm-trusted-firmware-rk3568
-  PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
-  ATF:=rk3568_bl31_v1.43.elf
-  DDR:=rk3568_ddr_1560MHz_v1.18.bin
+  ATF:=rk3568_bl31_v1.28.elf
+  DDR:=rk3568_ddr_1560MHz_v1.13.bin
 endef
 
 define U-Boot/station-p2-rk3568
@@ -316,21 +259,19 @@ define U-Boot/station-p2-rk3568
        firefly_station-p2
   DEPENDS:=+PACKAGE_u-boot-station-p2-rk3568:arm-trusted-firmware-rk3568
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
-  ATF:=rk3568_bl31_v1.43.elf
-  DDR:=rk3568_ddr_1560MHz_v1.18.bin
+  ATF:=rk3568_bl31_v1.28.elf
+  DDR:=rk3568_ddr_1560MHz_v1.13.bin
 endef
 
 UBOOT_TARGETS := \
-  lyt-t68m-rk3568 \
   mrkaio-m68s-rk3568 \
   opc-h68k-rk3568 \
+  xgp-rk3568 \
   photonicat-rk3568 \
   radxa-e25-rk3568 \
   rock-3a-rk3568 \
   r66s-rk3568 \
-  seewo-sv21-rk3568 \
   station-p2-rk3568 \
-  panther-x2-rk3566 \
   sharevdi-h3399pc-rk3399 \
   guangmiao-g4c-rk3399 \
   nanopi-r4s-rk3399 \
@@ -340,8 +281,6 @@ UBOOT_TARGETS := \
   rockpro64-rk3399 \
   rongpin-king3399-rk3399 \
   rocktech-mpc1903-rk3399 \
-  dilusense-dlfr100-rk3399 \
-  xiaobao-nas-v1-rk3399 \
   nanopi-r2c-rk3328 \
   nanopi-r2s-rk3328 \
   orangepi-r1-plus-rk3328 \
@@ -350,18 +289,7 @@ UBOOT_TARGETS := \
 UBOOT_CONFIGURE_VARS += USE_PRIVATE_LIBGCC=yes
 
 UBOOT_MAKE_FLAGS += \
-  PATH=$(STAGING_DIR_HOST)/bin:$(PATH) \
   BL31=$(STAGING_DIR_IMAGE)/$(ATF)
-
-ifeq ($(CONFIG_PACKAGE_arm-trusted-firmware-rk3568),y)
-UBOOT_MAKE_FLAGS += \
-  ROCKCHIP_TPL=$(STAGING_DIR_IMAGE)/$(DDR)
-endif
-
-ifeq ($(CONFIG_PACKAGE_arm-trusted-firmware-rk3566),y)
-UBOOT_MAKE_FLAGS += \
-  ROCKCHIP_TPL=$(STAGING_DIR_IMAGE)/$(DDR)
-endif
 
 define Build/Configure
 	$(call Build/Configure/U-Boot)
@@ -369,6 +297,9 @@ define Build/Configure
 	$(SED) 's/CONFIG_TOOLS_LIBCRYPTO=y/# CONFIG_TOOLS_LIBCRYPTO is not set/' $(PKG_BUILD_DIR)/.config
 	$(SED) 's#CONFIG_MKIMAGE_DTC_PATH=.*#CONFIG_MKIMAGE_DTC_PATH="$(PKG_BUILD_DIR)/scripts/dtc/dtc"#g' $(PKG_BUILD_DIR)/.config
 	echo 'CONFIG_IDENT_STRING=" OpenWrt"' >> $(PKG_BUILD_DIR)/.config
+ifneq ($(DDR),)
+	$(CP) $(STAGING_DIR_IMAGE)/$(DDR) $(PKG_BUILD_DIR)/ram_init.bin
+endif
 endef
 
 define Build/InstallDev
