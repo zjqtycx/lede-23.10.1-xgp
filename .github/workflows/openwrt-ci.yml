@@ -105,8 +105,6 @@ jobs:
           CONFIG_PACKAGE_ath10k-firmware-qca99x0-ct-full-htt=y
           CONFIG_PACKAGE_ath11k-firmware-qca6390=y
           CONFIG_PACKAGE_ath11k-firmware-qcn9074=y
-          CONFIG_PACKAGE_ath11k-firmware-wcn6750=y
-          CONFIG_PACKAGE_ath11k-firmware-wcn6855=y
           CONFIG_PACKAGE_ath9k-htc-firmware=y
           CONFIG_PACKAGE_bluez-daemon=y
           CONFIG_PACKAGE_bluez-libs=y
