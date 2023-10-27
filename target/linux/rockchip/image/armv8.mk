@@ -326,3 +326,12 @@ define Device/xunlong_orangepi-r1-plus-lts
   DEVICE_PACKAGES := kmod-usb-net-rtl8152
 endef
 TARGET_DEVICES += xunlong_orangepi-r1-plus-lts
+
+define Device/hinlink_h88k
+$(call Device/hinlink_rk3588)
+$(call Device/rk3588_combined_hinlink)
+  DEVICE_MODEL := H88K
+  SUPPORTED_DEVICES += hinlink,h88k-v2 hinlink,h88k-v3 hinlink,h88k
+  DEVICE_DTS := rockchip/rk3588-h88k-v2 rockchip/rk3588-h88k-v3
+endef
+TARGET_DEVICES += hinlink_h88k
